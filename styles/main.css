@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fjalla One", sans-serif;
+  background: #dde6ed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+}
+
+#head {
+  animation: rotate 3s ease infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#body {
+  animation: translateLegs 3s ease infinite alternate;
+}
+
+#zLowe {
+  animation: fadeZLower 6s ease infinite;
+}
+
+#zMid {
+  animation: fadeZMid 6s ease infinite;
+}
+
+#zTop {
+  animation: fadeZTop 6s ease infinite;
+}
+
+#mouth {
+  animation: mouth 3s ease infinite alternate;
+}
+
+@keyframes mouth {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes fadeZLower {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeZMid {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeZTop {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotatez(0deg);
+  }
+  to {
+    transform: rotatez(6deg);
+  }
+}
+
+@keyframes translateLegs {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-3px);
+  }
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 42px;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+
+.text {
+  position: absolute;
+  top: 75%;
+  right: 5%;
+}
+
+.title {
+  transform: rotate(-10deg);
+  display: block;
+}
+
+.title span {
+  transform: skew(20deg);
+  text-shadow: #533d4a 1px 1px, #533d4a 1px 1px, #533d4a 2px 2px,
+    #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 3px 3px;
+}
+
+.title:nth-child(1) {
+  color: #6c63ff;
+}
+
+.title:nth-child(2) {
+  color: #6c63ff;
+}
+
+.title:nth-child(3) {
+  color: #6c63ff;
+}
